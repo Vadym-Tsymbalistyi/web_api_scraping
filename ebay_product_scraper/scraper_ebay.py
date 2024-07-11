@@ -6,6 +6,12 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+class EbayScraper:
+    def __init__(self,url,file_name='index_selenium.html'):
+        self.url = url
+        self.file_name = file_name
+        self.all_products_data=[]
+
 
 def fetch_page(url, file_name):
     try:
